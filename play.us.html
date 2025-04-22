@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolf Card - How to Play</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header, .footer {
+      background-color: #1f1f1f;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .header h1, .footer p {
+      color: #ffcc00;
+      margin: 0;
+    }
+    h2, h3 {
+      color: #ffcc00;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .character-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #333;
+    }
+    .section-title {
+      border-bottom: 2px solid #ffcc00;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup img {
+      max-width: 80%;
+      max-height: 80%;
+      border: 5px solid #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #ffcc00;
+      transition: transform 0.3s ease;
+    }
+
+    .popup:hover img {
+      transform: scale(1.02);
+    }
+
+    .character-grid img {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .character-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<header class="header sticky-top">
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid justify-content-between">
+      <h1 class="navbar-brand m-0 text-warning">
+        <i class="fa-solid fa-wolf-pack-battalion"></i> Wolf Card - How to Play
+      </h1>
+      <a href="index_en.html" class="btn btn-warning">
+        <i class="fa-solid fa-house"></i> BACK TO HOME
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+
+  <section id="gameplay">
+    <h2 class="section-title">Gameplay</h2>
+    <p><strong>Goal:</strong></p>
+    <ul>
+      <li><strong>Werewolf team:</strong> Eliminate villagers until their number equals the wolves.</li>
+      <li><strong>Villager team:</strong> Identify and eliminate hidden werewolves.</li>
+    </ul>
+    <p><strong>Players:</strong> 5 – 15</p>
+    <p><strong>Game Master:</strong> In-game NPC</p>
+    <p><strong>Game start:</strong> Players are randomly assigned roles (wolf, villager, seer, etc.)</p>
+  </section>
+
+  <section id="phase">
+    <h3 class="section-title">Game Phases</h3>
+    <p><strong>Day:</strong> Discuss and vote. Eliminated players will reveal their roles.</p>
+    <p><strong>Night:</strong> NPC calls special roles to perform their actions.</p>
+    <ul>
+      <li>Basic role order: Werewolf → Seer → Guardian → Witch</li>
+      <li>With 10+ players: Cupid → Witch → Traitor → ...</li>
+    </ul>
+  </section>
+
+  <section id="score-rank">
+    <h3 class="section-title">Scoring & Rewards</h3>
+    <p>Players earn points based on performance to rank up.</p>
+  </section>
+
+  <section id="card-balance">
+    <h3 class="section-title">Role Distribution</h3>
+    <p><strong>5–10 players:</strong> 1–3 Wolves, the rest villagers and possibly special roles.</p>
+    <p><strong>11+ players:</strong> Add special roles (Witch, Hunter, etc.) for balance.</p>
+    <p><strong>Example with 15 players:</strong> 3 Wolves (1 normal, 1 sick, 1 gray), 8 Villagers (5 normal + 3 special), 2 third-party roles.</p>
+  </section>
+
+  <section id="cards">
+    <h3 class="section-title">Characters & Abilities</h3>
+    <p><strong>Villager team:</strong> Village Chief, Normal Villager, Seer, Witch, Guardian, Cupid, Hunter,...</p>
+    <p><strong>Werewolf team:</strong> Normal Wolf, Alpha Wolf, Sick Wolf, Baby Wolf, Traitor...</p>
+    <p><strong>Third Party:</strong> Gray Wolf, Piper, Doomsayer, Mirror Image...</p>
+  </section>
+
+  <section id="images-villagers">
+    <h3 class="section-title">Images - VILLAGERS</h3>
+    <div class="character-grid">
+      <img src="assets/dan/1.png" alt="Villager 1">
+      <img src="assets/dan/2.png" alt="Villager 2">
+      <img src="assets/dan/3.png" alt="Villager 3">
+      <img src="assets/dan/4.png" alt="Villager 4">
+      <img src="assets/dan/5.png" alt="Villager 5">
+    </div>
+  </section>
+
+  <section id="images-wolves">
+    <h3 class="section-title">Images - WEREWOLVES</h3>
+    <div class="character-grid">
+      <img src="assets/soi/2.png" alt="Wolf 1">
+      <img src="assets/soi/3.png" alt="Wolf 2">
+      <img src="assets/soi/4.png" alt="Wolf 3">
+      <img src="assets/soi/5.png" alt="Wolf 4">
+      <img src="assets/soi/6.png" alt="Wolf 5">
+    </div>
+  </section>
+
+  <section id="images-thirdparty">
+    <h3 class="section-title">Images - THIRD PARTY</h3>
+    <div class="character-grid">
+      <img src="assets/thu3/1.png" alt="Third Party 1">
+      <img src="assets/thu3/7.png" alt="Third Party 2">
+      <img src="assets/thu3/8.png" alt="Third Party 3">
+      <img src="assets/thu3/9.png" alt="Third Party 4">
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2025 Wolf Card | Designed by Team 3 - VTC Academy</p>
+</footer>
+
+<!-- Popup for image zoom -->
+<div id="popup" class="popup" onclick="closePopup()">
+  <img id="popup-img" src="" alt="Zoom Image">
+</div>
+
+<script>
+  document.querySelectorAll(".character-grid img").forEach(img => {
+    img.addEventListener("click", function () {
+      openPopup(this.src);
+    });
+  });
+
+  function openPopup(src) {
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+    popupImg.src = src;
+    popup.style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</body>
+</html>

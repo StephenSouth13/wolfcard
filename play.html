@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolf Card - Cách Chơi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .header, .footer {
+      background-color: #1f1f1f;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .header h1, .footer p {
+      color: #ffcc00;
+      margin: 0;
+    }
+    h2, h3 {
+      color: #ffcc00;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .character-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #333;
+    }
+    .section-title {
+      border-bottom: 2px solid #ffcc00;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+    .popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .popup img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #ffcc00;
+    transition: transform 0.3s ease;
+  }
+
+  .popup:hover img {
+    transform: scale(1.02);
+  }
+
+  .character-grid img {
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .character-grid img:hover {
+    transform: scale(1.05);
+  }
+  </style>
+</head>
+<body>
+
+    <header class="header sticky-top">
+        <nav class="navbar navbar-dark bg-dark">
+          <div class="container-fluid justify-content-between">
+            <h1 class="navbar-brand m-0 text-warning">
+              <i class="fa-solid fa-wolf-pack-battalion"></i> Wolf Card - Cách Chơi
+            </h1>
+            <a href="index.html" class="btn btn-warning">
+              <i class="fa-solid fa-house"></i> TRỞ VỀ TRANG CHỦ
+            </a>
+          </div>
+        </nav>
+      </header>
+      
+  <main class="container">
+
+    <section id="gameplay">
+      <h2 class="section-title">Lối chơi (Gameplay)</h2>
+      <p><strong>Mục tiêu:</strong></p>
+      <ul>
+        <li><strong>Phe người sói:</strong> Ăn thịt dân làng cho đến khi số dân bằng với người sói.</li>
+        <li><strong>Phe dân làng:</strong> Tìm và loại bỏ người sói ẩn mình trong làng.</li>
+      </ul>
+      <p><strong>Số người chơi:</strong> 5 – 15</p>
+      <p><strong>Quản trò:</strong> NPC trong game</p>
+      <p><strong>Bắt đầu trò chơi:</strong> Người chơi được chia vai ngẫu nhiên (sói, dân làng, tiên tri,...)</p>
+    </section>
+
+    <section id="phase">
+      <h3 class="section-title">Giai đoạn trong game</h3>
+      <p><strong>Ban ngày:</strong> Tranh luận và bỏ phiếu. Người bị loại sẽ lộ thân phận.</p>
+      <p><strong>Ban đêm:</strong> NPC gọi từng vai trò đặc biệt để thực hiện nhiệm vụ.</p>
+      <ul>
+        <li>Thứ tự gọi (phiên bản cơ bản): Ma Sói → Tiên Tri → Bảo Vệ → Phù Thủy</li>
+        <li>Thứ tự gọi (trên 10 người): Cupid → Phù Thủy → Kẻ Phản Bội → ...</li>
+      </ul>
+    </section>
+
+    <section id="score-rank">
+      <h3 class="section-title">Hệ thống điểm & phần thưởng</h3>
+      <p>Người chơi nhận Point dựa trên màn thể hiện để tăng rank.</p>
+    </section>
+
+    <section id="card-balance">
+      <h3 class="section-title">Chia bài theo số lượng người chơi</h3>
+      <p><strong>5–10 người:</strong> 1–3 Sói, còn lại là dân, có thể thêm vai đặc biệt.</p>
+      <p><strong>11+ người:</strong> Thêm các vai đặc biệt (Phù Thủy, Thợ Săn,...), cân bằng phe.</p>
+      <p><strong>Ví dụ 15 người:</strong> 3 Sói (1 thường, 1 bệnh, 1 xám), 8 Dân (5 thường + 3 đặc biệt), 2 phe thứ ba.</p>
+    </section>
+
+    <section id="cards">
+      <h3 class="section-title">Các nhân vật & chức năng</h3>
+      <p><strong>Phe dân:</strong> Trưởng làng, Dân thường, Tiên tri, Phù Thủy, Bảo vệ, Cupid, Thợ săn,...</p>
+      <p><strong>Phe sói:</strong> Sói thường, Sói đầu đàn, Sói bệnh, Sói con, Kẻ phản bội...</p>
+      <p><strong>Phe thứ ba:</strong> Sói xám, Người thổi sáo, Kẻ chán đời, Gương nhân bản...</p>
+    </section>
+
+    <section id="images-villagers">
+      <h3 class="section-title">Hình ảnh - PHE DÂN LÀNG</h3>
+      <div class="character-grid">
+        <img src="assets/dan/1.png" alt="Villager 1">
+        <img src="assets/dan/2.png" alt="Villager 2">
+        <img src="assets/dan/3.png" alt="Villager 3">
+        <img src="assets/dan/4.png" alt="Villager 4">
+        <img src="assets/dan/5.png" alt="Villager 5">
+      </div>
+    </section>
+
+    <section id="images-wolves">
+      <h3 class="section-title">Hình ảnh - PHE SÓI</h3>
+      <div class="character-grid">
+        <img src="assets/soi/2.png" alt="Wolf 1">
+        <img src="assets/soi/3.png" alt="Wolf 2">
+        <img src="assets/soi/4.png" alt="Wolf 3">
+        <img src="assets/soi/5.png" alt="Wolf 4">
+        <img src="assets/soi/6.png" alt="Wolf 5">
+      </div>
+    </section>
+
+    <section id="images-thirdparty">
+      <h3 class="section-title">Hình ảnh - PHE THỨ 3</h3>
+      <div class="character-grid">
+        <img src="assets/thu3/1.png" alt="Third Party 1">
+        <img src="assets/thu3/7.png" alt="Third Party 2">
+        <img src="assets/thu3/8.png" alt="Third Party 3">
+        <img src="assets/thu3/9.png" alt="Third Party 4">
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Wolf Card | Thiết kế bởi Nhóm 3 - VTC Academy</p>
+  </footer>
+<!-- Popup hiển thị ảnh lớn -->
+<div id="popup" class="popup" onclick="closePopup()">
+    <img id="popup-img" src="" alt="Zoom Image">
+  </div>
+  
+  <script>
+    // Gắn sự kiện click cho ảnh
+    document.querySelectorAll(".character-grid img").forEach(img => {
+      img.addEventListener("click", function () {
+        openPopup(this.src);
+      });
+    });
+  
+    function openPopup(src) {
+      const popup = document.getElementById("popup");
+      const popupImg = document.getElementById("popup-img");
+      popupImg.src = src;
+      popup.style.display = "flex";
+    }
+  
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+  
+</body>
+</html>

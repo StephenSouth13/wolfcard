@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Wolf Card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .navbar {
+      background-color: #1c1c1c;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107;
+    }
+    footer {
+      background-color: #1c1c1c;
+      color: #ccc;
+    }
+    .social-icons a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #ffffff;
+    }
+    .fade-in {
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand text-warning" href="#"><i class="fas fa-wolf-pack-battalion"></i> Wolf Card</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon text-white"><i class="fas fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link active text-warning" href="#"><i class="fas fa-book"></i> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="developers.html"><i class="fas fa-users"></i> Developers</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main content -->
+<section id="idea" class="py-5 bg-dark text-white mt-5">
+  <div class="container">
+    <h2 class="mb-4 text-center"><i class="fas fa-lightbulb text-warning"></i> Game Concept</h2>
+    <p class="lead text-center fade-in">
+      <strong>Wolf Card</strong> is a strategic card game where each player secretly plays a unique role in a mysterious village. Every match is a mind game, where you must rely on logic and instinct to survive and protect your side.
+    </p>
+    <ul class="list-unstyled fade-in">
+      <li><i class="fas fa-paw text-danger me-2"></i><strong>Werewolves:</strong> eliminate others without getting caught.</li>
+      <li><i class="fas fa-user-shield text-info me-2"></i><strong>Villagers:</strong> work together to identify and defeat the wolves.</li>
+      <li><i class="fas fa-magic text-success me-2"></i> Unique roles make each game fresh, unpredictable, and exciting.</li>
+    </ul>
+
+    <hr class="border-light my-4">
+
+    <h4 class="text-center mb-3"><i class="fas fa-users text-primary"></i> About the Team</h4>
+    <p class="text-center fade-in">
+      We are a group of passionate students from <strong>VTC Academy</strong>, driven by creativity, teamwork, and a love for games and technology. <strong>Wolf Card</strong> was developed as an academic project — but with a professional mindset and real-world inspiration.
+    </p>
+    <div class="text-center mt-4 fade-in">
+      <i class="fas fa-laptop-code fa-2x text-warning mx-2"></i>
+      <i class="fas fa-brain fa-2x text-info mx-2"></i>
+      <i class="fas fa-gamepad fa-2x text-success mx-2"></i>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 text-center">
+  <div class="container">
+    <p class="mb-2">© 2025 Wolf Card | Thiết kế bởi Nhóm 3 - VTC Academy</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

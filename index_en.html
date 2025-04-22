@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wolf Card - Werewolf Strategy Game</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand me-3" href="#"><img src="logo.png" alt="Wolf Card Logo" height="40"></a>
+
+        <!-- Language switch -->
+        <a href="index.html" class="btn lang-btn ms-2">SWITCH TO VIETNAMESE</a>
+
+        <!-- Toggle menu mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Main menu -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#gioithieu" role="button" data-bs-toggle="dropdown">ABOUT</a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item text-light" href="#y-tuong">Game Concept</a></li>
+                <li><a class="dropdown-item text-light" href="#cach-choi">How to Play</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#dev">DEVELOPERS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#lienhe">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HOME (CAROUSEL) -->
+  <section id="home">
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="wolfman_by_shikazan-d4tgevm.webp" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="108833169_275718500165396_3382281054410585256_n.png" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="ma-soi-thumb.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="gioithieu" class="container py-5 text-light fade-in">
+
+    <!-- Game Concept -->
+    <div id="y-tuong" class="mb-5">
+      <h2><i class="fas fa-lightbulb text-warning me-2"></i>Game Concept 🐺</h2>
+      <p>
+        <strong>Wolf Card</strong> is a strategic card game inspired by the traditional Werewolf game, enhanced with new roles,
+        special mechanics, and diverse gameplay. The game encourages critical thinking, team strategy, and deduction skills in a thrilling and mysterious atmosphere.
+      </p>
+      <!-- More info button -->
+      <div class="text-center mt-4">
+        <a href="introduce.us.html" class="btn btn-outline-light btn-lg rounded-pill shadow-sm transition-hover">
+          🔍 Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- How to Play -->
+    <div id="cach-choi" class="mb-4">
+      <h2><i class="fas fa-gamepad text-info me-2"></i>How to Play</h2>
+      <p>
+        Players take on secret roles and perform actions at night, then debate and vote during the day to find the hidden enemies among them.
+        The main confrontation is between the Werewolves and Villagers, but the game may also include third-party factions and unique special roles.
+      </p>
+      <!-- More info button -->
+      <div class="text-center mt-4">
+        <a href="play.us.html" class="btn btn-outline-light btn-lg rounded-pill shadow-sm transition-hover">
+          🔍 Learn More
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- DEVELOPERS -->
+  <section id="dev" class="bg-dark text-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">👨‍💻 Developers</h2>
+      <div class="row text-center">
+
+        <!-- Mai Quốc Đăng -->
+        <div class="col-md-4 mb-4">
+          <div class="dev-card">
+            <img src="Dang.png" alt="Mai Quốc Đăng" class="dev-img">
+            <h5 class="mt-3">🐺 Mai Quốc Đăng</h5>
+            <p><i class="fas fa-network-wired"></i> Network Programmer</p>
+            <p><i class="fas fa-users-cog"></i> Multiplayer Designer</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quách Thành Long -->
+        <div class="col-md-4 mb-4">
+          <div class="dev-card">
+            <img src="long.jpg" alt="Quách Thành Long" class="dev-img">
+            <h5 class="mt-3">🧙‍♂️ Quách Thành Long</h5>
+            <p><i class="fas fa-crown"></i> Team Leader</p>
+            <p><i class="fas fa-laptop-code"></i> Developer/Website</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Võ Thành Đạt -->
+        <div class="col-md-4 mb-4">
+          <div class="dev-card">
+            <img src="Dat.png" alt="Võ Thành Đạt" class="dev-img">
+            <h5 class="mt-3">🎨 Võ Thành Đạt</h5>
+            <p><i class="fas fa-user"></i> Member</p>
+            <p><i class="fas fa-pencil-ruler"></i> Developer/Designer</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="lienhe" class="contact-section py-5 text-light">
+    <div class="container">
+      <h2 class="text-center spooky-title mb-4"><i class="fas fa-skull-crossbones"></i> Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="5" placeholder="Message"></textarea>
+        <div class="text-center">
+          <button type="submit" class="bloody-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-light text-center py-3">
+    <p>&copy; 2025 Wolf Card | Designed by Group 3 - VTC Academy</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
